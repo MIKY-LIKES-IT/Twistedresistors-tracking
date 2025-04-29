@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Your Order - Twisted Resistors 2 Go</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+      font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 500px;
+      margin: auto;
+    }
+    input[type="text"] {
+      padding: 12px;
+      width: 80%;
+      margin: 10px 0;
+      border: 2px solid #333;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+    button {
+      padding: 12px 25px;
+      background: #ff7e5f;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #feb47b;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+    .contact-link {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+    .contact-link a {
+      color: #ff5e62;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Thank you for ordering from Twisted Resistors 2 Go! 🎉</h1>
+    <p>Enter your order number to track your shipment:</p>
+    <input type="text" id="orderNumber" placeholder="Enter Order Number...">
+    <br>
+    <button onclick="checkTracking()">Track Order</button>
+    <div class="message" id="message"></div>
+    <div class="contact-link">
+      Need help? <a href="https://www.ebay.com/usr/twistedresistors2go" target="_blank">Send us a message on eBay!</a>
+    </div>
+  </div>
+
+<script>
+  function checkTracking() {
+    const order = document.getElementById('orderNumber').value.trim();
+    if (order === "") {
+      document.getElementById('message').innerText = "Please enter your order number.";
+      return;
+    }
+    // Simulate tracking lookup
+    document.getElementById('message').innerText = `Tracking updates for Order #${order} will be sent via Informed Delivery. Thank you!`;
+  }
+</script>
+
+</body>
+</html>
