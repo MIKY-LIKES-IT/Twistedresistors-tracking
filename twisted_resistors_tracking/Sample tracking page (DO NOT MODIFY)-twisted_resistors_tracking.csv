@@ -1,0 +1,4 @@
+Order Number,Barcode,Status,Notes
+TR2G-00001,IMB0123456789,Accepted,Scanned at sorting center
+TR2G-00002,IMB0987654321,In Transit,Expected delivery: May 5
+TR2G-00003,IMB5678901234,Delivered,Delivered at mailbox: May 1
